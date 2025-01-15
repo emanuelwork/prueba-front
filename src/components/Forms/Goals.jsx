@@ -12,21 +12,14 @@ import { GymIcon } from "../icons/GymIcon";
 import { HealthIcon } from "../icons/HealthIcon";
 import { WeightScaleIcon } from "../icons/WeightScaleIcon";
 import ButtonSave from "../shared/ButtonSave";
-import { useFormStore } from "../../context/formContext";
 
 export default function Goals({ setFormPage, setWelcomePage }) {
   useEffect(() => {
     setWelcomePage(2);
   }, []);
 
-  const { data } = useFormStore();
-
   function handleContinue() {
-    if (data.name && data.age && data.email && data.phone && data.location) {
-      setFormPage(3);
-    } else {
-      alert("Por favor, rellena todos los campos");
-    }
+    setFormPage(3);
   }
 
   const [goal, setGoal] = useState(1);
