@@ -1,0 +1,22 @@
+.buttonSave {
+  font-size: 0.75rem;
+  color: #686767;
+  text-align: start;
+  margin: 0 1rem;
+  padding-left: 1rem;
+  max-width: 10rem;
+}
+
+.buttonSave:hover {
+  transform: scale(1.05);
+  transition: all 0.15s ease-in;
+  cursor: pointer;
+}
+
+.buttonSave > span {
+  display: flex;
+  gap: 0.25rem;
+  color: #005fc5;
+  text-decoration: underline;
+  align-items: center;
+}

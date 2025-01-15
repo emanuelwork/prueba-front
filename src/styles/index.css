@@ -1,0 +1,26 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  color-scheme: light;
+
+  /* Navbar */
+  --navbar-font-color-light: #868589;
+  --navbar-font-color-dark: #434142;
+  --font-color-primary: #434142;
+  --welcome-bg-color: #f7f7f7;
+  --form-accent-color: #ffd61b;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  color: #434142;
+  font-weight: normal;
+}

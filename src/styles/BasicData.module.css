@@ -1,0 +1,18 @@
+.basicData {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem 0 0 0;
+  width: 50%;
+  gap: 2rem;
+}
+
+.basicData > div:nth-child(4) {
+  display: flex;
+  flex-direction: column;
+}
+
+.basicData > div {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}

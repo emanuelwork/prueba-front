@@ -1,0 +1,18 @@
+.button {
+  background-color: #ffd61b;
+  color: var(--navbar-font-color-dark);
+  border-radius: 28px;
+  min-width: 12.5rem;
+  max-width: 15rem;
+  padding: 1rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  align-self: center;
+}
+
+.button:hover {
+  background-color: #ffdf4f;
+  transform: scale(1.05);
+  transition: all 0.15s ease-in;
+  box-shadow: 0 0.25rem 0.25rem rgba(0, 0, 0, 0.3);
+}

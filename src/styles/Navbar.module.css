@@ -1,0 +1,41 @@
+.navBar {
+  box-shadow: 8px 8px 16px #0000000a;
+  position: relative;
+  z-index: 20;
+}
+
+.navBar ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  justify-content: space-around;
+  align-items: center;
+  padding: 16px 64px;
+}
+
+.navBar ul li {
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+}
+
+ul li:nth-child(2) {
+  color: var(--navbar-font-color-dark);
+}
+
+ul li:nth-child(3) button {
+  color: var(--navbar-font-color-light);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  border: none;
+  background: transparent;
+  font: inherit;
+  cursor: pointer;
+}
+
+ul li:nth-child(3) button:hover {
+  scale: 1.05;
+  transition: all 0.2s ease-in-out;
+}
