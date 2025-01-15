@@ -12,8 +12,9 @@ import ButtonSave from "../shared/ButtonSave";
 import Input from "../shared/Input";
 import SelectModal from "../shared/SelectModal";
 
-export default function MedicalHistory({ setFormPage }) {
+export default function MedicalHistory({ setFormPage, setWelcomePage }) {
   const fileInputRef = useRef(null);
+  setWelcomePage(2);
 
   return (
     <section className={medicalHistory}>

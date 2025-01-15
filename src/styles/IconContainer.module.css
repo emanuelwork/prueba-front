@@ -1,0 +1,23 @@
+.iconContainerActive {
+  background-color: #ffd61b;
+  border-radius: 50%;
+  object-fit: cover;
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+
+.iconContainerDisabled {
+  background-color: #d9d9d9;
+  border-radius: 50%;
+  object-fit: cover;
+  height: 2rem;
+  width: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}

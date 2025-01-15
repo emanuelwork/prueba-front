@@ -12,7 +12,8 @@ import { HealthIcon } from "../icons/HealthIcon";
 import { WeightScaleIcon } from "../icons/WeightScaleIcon";
 import ButtonSave from "../shared/ButtonSave";
 
-export default function Goals({ setFormPage }) {
+export default function Goals({ setFormPage, setWelcomePage }) {
+  setWelcomePage(2);
   return (
     <section className={goals}>
       <h2>

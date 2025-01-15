@@ -9,7 +9,9 @@ import Button from "../shared/Button";
 
 import Input from "../shared/Input";
 
-export default function BasicData({ setFormPage }) {
+export default function BasicData({ setFormPage, setWelcomePage }) {
+  setWelcomePage(1);
+
   return (
     <div className={basicData}>
       <h1>Para comenzar, ayúdanos a verificar tus datos.</h1>
