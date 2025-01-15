@@ -8,7 +8,7 @@ import IconContainer from "./shared/IconContainer";
 export default function Welcome({ page }) {
   return page === 1 ? (
     <section className={welcome}>
-      <img src="/src/assets/avatar.jpg" alt="avatar" />
+      <img src="/avatar.jpg" alt="avatar" />
       <h1>
         <span>¡Bienvenida</span> Oscar Adan!
       </h1>
@@ -17,7 +17,7 @@ export default function Welcome({ page }) {
     <section className={welcomeInfo}>
       <div>
         <div>
-          <img src="/src/assets/avatar.jpg" alt="avatar" />
+          <img src="/avatar.jpg" alt="avatar" />
           <div>
             <h1>Nutrición</h1>
             <h2>Hola, Oscar Adan</h2>
