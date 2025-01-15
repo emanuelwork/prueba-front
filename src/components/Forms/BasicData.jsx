@@ -1,7 +1,5 @@
 import { useEffect } from "react";
 
-import { useFormStore } from "../../context/formContext";
-
 import { basicData } from "../../styles/BasicData.module.css";
 import { CakeIcon } from "../icons/CakeIcon";
 import { LocationIcon } from "../icons/LocationIcon";
@@ -17,14 +15,8 @@ export default function BasicData({ setFormPage, setWelcomePage }) {
     setWelcomePage(1);
   }, []);
 
-  const { data } = useFormStore();
-
   function handleContinue() {
-    if (data.name && data.age && data.email && data.phone && data.location) {
-      setFormPage(2);
-    } else {
-      alert("Por favor, rellena todos los campos");
-    }
+    setFormPage(2);
   }
 
   return (

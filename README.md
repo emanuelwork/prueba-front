@@ -1,3 +1,32 @@
+# Prueba de Frontend con React
+
+- Nota: El live del proyecto se puede consultar en **[este link](https://prueba-front-emanuelwork.vercel.app/)** y **[aquí el código](https://github.com/emanuelwork/prueba-front)**
+
+## Stack de desarrollo
+
+- React
+- Vite
+- Zustand
+- NodeJS (v22.13.0)
+
+## Como ejecutar en local
+
+Primero debes estar en la carpeta del proyecto y ejecutar los siguientes comandos:
+
+1. Instalar dependencias
+
+```bash
+npm install
+```
+
+2. Iniciar el servidor de desarrollo
+
+```bash
+npm run dev
+```
+
+3. Abrir la aplicación en tu navegador e ir a http://localhost:3000
+
 # Estructura de carpetas
 
 ```md
