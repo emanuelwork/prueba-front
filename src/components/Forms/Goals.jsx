@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { goals } from "../../styles/Goals.module.css";
 
 import Button from "../shared/Button";
@@ -13,7 +14,11 @@ import { WeightScaleIcon } from "../icons/WeightScaleIcon";
 import ButtonSave from "../shared/ButtonSave";
 
 export default function Goals({ setFormPage, setWelcomePage }) {
-  setWelcomePage(2);
+  useEffect(() => {
+    setWelcomePage(2);
+  }, []);
+
+  const [goal, setGoal] = useState(1);
   return (
     <section className={goals}>
       <h2>
@@ -39,16 +44,32 @@ export default function Goals({ setFormPage, setWelcomePage }) {
         <h2>¿Qué buscas al mejorar tu alimentación?</h2>
         <div>
           <ButtonCard
-            active={true}
+            active={goal === 1}
+            onclick={() => setGoal(1)}
             text={"Pérdida de peso"}
             Icon={WeightScaleIcon}
           />
 
-          <ButtonCard text={"Pérdida de peso"} Icon={FoodIcon} />
+          <ButtonCard
+            onclick={() => setGoal(2)}
+            active={goal === 2}
+            text={"Pérdida de peso"}
+            Icon={FoodIcon}
+          />
 
-          <ButtonCard text={"Aumento de masa muscular"} Icon={GymIcon} />
+          <ButtonCard
+            onclick={() => setGoal(3)}
+            active={goal === 3}
+            text={"Aumento de masa muscular"}
+            Icon={GymIcon}
+          />
 
-          <ButtonCard text={"Control de enfermedades"} Icon={HealthIcon} />
+          <ButtonCard
+            onclick={() => setGoal(4)}
+            active={goal === 4}
+            text={"Control de enfermedades"}
+            Icon={HealthIcon}
+          />
         </div>
       </div>
 

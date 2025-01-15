@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import {
   medicalHistory,
   medicalHistoryCheckList,
@@ -13,8 +13,10 @@ import Input from "../shared/Input";
 import SelectModal from "../shared/SelectModal";
 
 export default function MedicalHistory({ setFormPage, setWelcomePage }) {
+  useEffect(() => {
+    setWelcomePage(3);
+  }, []);
   const fileInputRef = useRef(null);
-  setWelcomePage(2);
 
   return (
     <section className={medicalHistory}>

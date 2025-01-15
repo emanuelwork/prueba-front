@@ -29,11 +29,11 @@ export default function Welcome({ page }) {
           </div>
         </div>
         <div>
-          <IconContainer active={true}>
+          <IconContainer active={page === 2}>
             <AppleIcon color="#434142" />
           </IconContainer>
           <p>···</p>
-          <IconContainer active={false}>
+          <IconContainer active={page === 3}>
             <HealthIcon />
           </IconContainer>
           <p>···</p>

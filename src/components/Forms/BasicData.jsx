@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { basicData } from "../../styles/BasicData.module.css";
 
 import { CakeIcon } from "../icons/CakeIcon";
@@ -10,7 +11,9 @@ import Button from "../shared/Button";
 import Input from "../shared/Input";
 
 export default function BasicData({ setFormPage, setWelcomePage }) {
-  setWelcomePage(1);
+  useEffect(() => {
+    setWelcomePage(1);
+  }, []);
 
   return (
     <div className={basicData}>

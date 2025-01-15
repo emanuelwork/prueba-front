@@ -3,14 +3,14 @@ import {
   buttonCardDisabled,
 } from "../../styles/ButtonCard.module.css";
 
-export default function ButtonCard({ text, Icon, active }) {
+export default function ButtonCard({ text, Icon, active, onclick }) {
   return active ? (
-    <button className={buttonCardActive}>
+    <button className={buttonCardActive} onClick={onclick}>
       {Icon && <Icon />}
       {text}
     </button>
   ) : (
-    <button className={buttonCardDisabled}>
+    <button className={buttonCardDisabled} onClick={onclick}>
       {Icon && <Icon />}
       {text}
     </button>
