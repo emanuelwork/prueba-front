@@ -18,6 +18,10 @@ export default function MedicalHistory({ setFormPage, setWelcomePage }) {
   }, []);
   const fileInputRef = useRef(null);
 
+  function handleContinue() {
+    setFormPage(1);
+  }
+
   return (
     <section className={medicalHistory}>
       <h2>Historial médico</h2>{" "}
@@ -64,11 +68,16 @@ export default function MedicalHistory({ setFormPage, setWelcomePage }) {
         </SelectModal>
 
         <SelectModal text="¿Tienes alguna alergia?" value="allergy">
-          <Input type="text" placeholder="Escribe aquí tus alergias" />
+          <Input
+            formValue={"allergy"}
+            type="text"
+            placeholder="Escribe aquí tus alergias"
+          />
         </SelectModal>
 
         <SelectModal text="¿Te han hecho alguna cirugía?" value="surgery">
           <Input
+            formValue={"surgery"}
             type="text"
             placeholder="¿A qué procedimiento quirúrgico te has sometido?"
           />
@@ -85,8 +94,16 @@ export default function MedicalHistory({ setFormPage, setWelcomePage }) {
           value="reduction"
         >
           <div>
-            <Input type="text" placeholder="ej. Cavitación" />
-            <Input type="text" placeholder="ej. 6 meses" />
+            <Input
+              formValue={"reduction"}
+              type="text"
+              placeholder="ej. 20 kg"
+            />
+            <Input
+              formValue={"recutionTime"}
+              type="text"
+              placeholder="ej. 6 meses"
+            />
           </div>
         </SelectModal>
       </div>
@@ -96,6 +113,7 @@ export default function MedicalHistory({ setFormPage, setWelcomePage }) {
           value="supplement"
         >
           <Input
+            formValue={"supplement"}
             type="text"
             text="¿Cuál?"
             placeholder="¿Te has realizado estudios médicos recientes?"
@@ -106,6 +124,7 @@ export default function MedicalHistory({ setFormPage, setWelcomePage }) {
           value="medicalHistory"
         >
           <Input
+            formValue={"medicalHistory"}
             type="text"
             text="¿Qué tipo de estudio médico?"
             placeholder="ej. Química Sanguinea, Hemoglobina, etc."
@@ -123,7 +142,7 @@ export default function MedicalHistory({ setFormPage, setWelcomePage }) {
       </div>
       <div>
         <ButtonSave />
-        <Button text={"Continuar"} action={() => setFormPage(1)} />
+        <Button text={"Continuar"} action={handleContinue} />
       </div>
     </section>
   );

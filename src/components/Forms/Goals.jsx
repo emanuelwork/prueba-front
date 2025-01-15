@@ -12,11 +12,22 @@ import { GymIcon } from "../icons/GymIcon";
 import { HealthIcon } from "../icons/HealthIcon";
 import { WeightScaleIcon } from "../icons/WeightScaleIcon";
 import ButtonSave from "../shared/ButtonSave";
+import { useFormStore } from "../../context/formContext";
 
 export default function Goals({ setFormPage, setWelcomePage }) {
   useEffect(() => {
     setWelcomePage(2);
   }, []);
+
+  const { data } = useFormStore();
+
+  function handleContinue() {
+    if (data.name && data.age && data.email && data.phone && data.location) {
+      setFormPage(3);
+    } else {
+      alert("Por favor, rellena todos los campos");
+    }
+  }
 
   const [goal, setGoal] = useState(1);
   return (
@@ -28,12 +39,19 @@ export default function Goals({ setFormPage, setWelcomePage }) {
 
       <div>
         <Input
+          formValue={"idealWeight"}
           text="¿Cuál es tu peso ideal?"
           placeholder="0.00 Kg"
           type="text"
         />
-        <Input text="¿Cuánto mides?" placeholder="0 cm" type="text" />
         <Input
+          formValue={"height"}
+          text="¿Cuánto mides?"
+          placeholder="0 cm"
+          type="text"
+        />
+        <Input
+          formValue={"idealWeight"}
           text="¿Cuál es tu peso ideal?"
           placeholder="0.00 Kg"
           type="text"
@@ -75,10 +93,12 @@ export default function Goals({ setFormPage, setWelcomePage }) {
 
       <div>
         <Input
+          formValue={"minWeight"}
           text="¿Cuál ha sido tu peso mínimo en los últimos 5 años?"
           placeholder="0.00 Kg"
         />
         <Input
+          formValue={"maxWeight"}
           text="¿Cuál ha sido tu peso máximo en los últimos 5 años?"
           placeholder="0.00 Kg"
         />
@@ -86,7 +106,7 @@ export default function Goals({ setFormPage, setWelcomePage }) {
 
       <div>
         <ButtonSave />
-        <Button text={"Continuar"} action={() => setFormPage(3)} />
+        <Button text={"Continuar"} action={handleContinue} />
       </div>
     </section>
   );
